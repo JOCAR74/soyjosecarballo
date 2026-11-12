@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
@@ -1396,8 +1395,8 @@
             <div class="hero-portrait-col">
                 <div class="portrait-card">
                     <div class="portrait-inner">
-                        <!-- Detecta automáticamente Unknown-3.jpeg, Unknown-3_2.jpeg o perfil.jpg -->
-                        <img id="profileImage" src="Unknown-3.jpeg" alt="José H. Carballo Araya"
+                        <!-- Ruta configurada directamente a tu carpeta foto/Unknown-3.jpeg -->
+                        <img id="profileImage" src="foto/Unknown-3.jpeg" alt="José H. Carballo Araya"
                              onerror="handleImageFallback(this)">
                         <div class="portrait-fallback" id="portraitFallback">
                             <div class="initials">JC</div>
@@ -2070,13 +2069,12 @@
 
     <!-- ================= SCRIPTS DE INTERACTIVIDAD Y ANIMACIONES ================= -->
     <script>
-        // 1. Detección automática de tu foto según el nombre con el que la subas a GitHub
+        // 1. Detección automática apuntando primero a tu carpeta foto/
         const candidatePhotos = [
-            'Unknown-3_2.jpeg',
-            'perfil.jpg',
-            'perfil.jpeg',
-            'perfil.png',
-            'foto.jpg'
+            'foto/Unknown-3_2.jpeg',
+            'foto/perfil.jpg',
+            'Unknown-3.jpeg',
+            'perfil.jpg'
         ];
         let photoAttempt = 0;
 
