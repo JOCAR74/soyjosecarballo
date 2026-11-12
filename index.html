@@ -1,1 +1,2224 @@
 
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José H. Carballo Araya | Portafolio Académico, Investigativo y Docente</title>
+    <meta name="description" content="Portafolio académico y científico de José H. Carballo Araya. Doctorando en Ciencias de la Educación, Investigador, Co-Autor y Especialista en Enseñanza del Francés, Pensamiento Crítico, Pedagogía Decolonial, Currículum, Evaluación y Administración Educativa.">
+
+    <!-- Tipografías Académicas de Prestigio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos Profesionales (Font Awesome 6) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --navy-950: #050E1D;
+            --navy-900: #0A1931;
+            --navy-800: #132C54;
+            --royal-700: #1D4ED8;
+            --sky-400: #38BDF8;
+            --gold-600: #A67C37;
+            --gold-500: #C5A059;
+            --gold-400: #DFB970;
+            --gold-100: #F9F3E5;
+            --bg-ivory: #F8FAFC;
+            --surface: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border-subtle: #E2E8F0;
+            --shadow-soft: 0 12px 32px -10px rgba(10, 25, 49, 0.08);
+            --shadow-hover: 0 22px 44px -12px rgba(10, 25, 49, 0.16);
+            --radius-lg: 18px;
+            --radius-md: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-ivory);
+            color: var(--text-main);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        /* ================= NAVEGACIÓN SUPERIOR ================= */
+        header.navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(5, 14, 29, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.28);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        .brand-monogram {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+            color: var(--navy-950);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 18px rgba(197, 160, 89, 0.45);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.28rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            line-height: 1.1;
+        }
+
+        .brand-role {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            color: var(--gold-400);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.86);
+            text-decoration: none;
+            font-size: 0.87rem;
+            font-weight: 500;
+            transition: color 0.25s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold-400);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-400);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+            color: var(--navy-950) !important;
+            padding: 0.5rem 1.15rem;
+            border-radius: 999px;
+            font-weight: 700 !important;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            color: var(--gold-400);
+            padding: 0.45rem 0.75rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        /* ================= HERO / PORTADA PRINCIPAL ================= */
+        .hero {
+            position: relative;
+            padding: 8.5rem 1.5rem 5rem;
+            background:
+                radial-gradient(circle at 82% 22%, rgba(29, 78, 216, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 15% 80%, rgba(197, 160, 89, 0.16) 0%, transparent 42%),
+                linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-800) 100%);
+            color: #FFFFFF;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 48px 48px;
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1260px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.25fr 0.85fr;
+            gap: 3.5rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .academic-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(197, 160, 89, 0.15);
+            border: 1px solid rgba(197, 160, 89, 0.45);
+            color: var(--gold-400);
+            padding: 0.42rem 1.05rem;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.6rem, 4.8vw, 4.25rem);
+            line-height: 1.08;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #FFFFFF 0%, var(--gold-400) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dynamic-role-wrapper {
+            font-size: clamp(1.1rem, 2vw, 1.38rem);
+            color: var(--sky-400);
+            font-weight: 500;
+            min-height: 2.2rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.3em;
+            background-color: var(--gold-400);
+            animation: blink 0.9s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-lead {
+            color: rgba(255, 255, 255, 0.84);
+            font-size: 1.03rem;
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.82rem 1.55rem;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+            color: var(--navy-950);
+            box-shadow: 0 10px 25px -5px rgba(197, 160, 89, 0.45);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(197, 160, 89, 0.65);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.06);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: var(--gold-400);
+            transform: translateY(-2px);
+        }
+
+        .hero-quick-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .q-badge {
+            font-size: 0.79rem;
+            color: rgba(255, 255, 255, 0.88);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 0.38rem 0.85rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+        }
+
+        .q-badge i {
+            color: var(--gold-400);
+        }
+
+        /* Retrato Hero */
+        .hero-portrait-col {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .portrait-card {
+            position: relative;
+            width: 100%;
+            max-width: 395px;
+            border-radius: 22px;
+            padding: 10px;
+            background: linear-gradient(145deg, rgba(197, 160, 89, 0.8), rgba(56, 189, 248, 0.25), rgba(197, 160, 89, 0.65));
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .portrait-inner {
+            border-radius: 15px;
+            overflow: hidden;
+            background: var(--navy-900);
+            aspect-ratio: 3 / 3.85;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portrait-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .portrait-fallback {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: #FFFFFF;
+            height: 100%;
+            width: 100%;
+            background: radial-gradient(circle, var(--navy-800), var(--navy-950));
+        }
+
+        .portrait-fallback .initials {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: var(--gold-400);
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
+        .floating-credential {
+            position: absolute;
+            bottom: -16px;
+            left: -18px;
+            background: rgba(10, 25, 49, 0.96);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--gold-500);
+            padding: 0.75rem 1.1rem;
+            border-radius: 14px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .floating-credential i {
+            font-size: 1.45rem;
+            color: var(--gold-400);
+        }
+
+        .floating-credential strong {
+            display: block;
+            font-size: 0.85rem;
+            color: #FFFFFF;
+        }
+
+        .floating-credential span {
+            font-size: 0.73rem;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        /* ================= BANNER ANIMADO DE EXPERIENCIA ================= */
+        .experience-banner {
+            background: linear-gradient(90deg, var(--navy-900), #102A52, var(--navy-900));
+            border-top: 2px solid var(--gold-500);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            color: #FFFFFF;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            max-width: 1260px;
+            margin: 0 auto;
+            padding: 2.3rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 0.45rem;
+            border-right: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--gold-400);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat-label {
+            font-size: 0.83rem;
+            color: rgba(255, 255, 255, 0.88);
+            font-weight: 500;
+        }
+
+        /* Cinta Institucional en Movimiento */
+        .marquee-wrapper {
+            background: var(--navy-950);
+            padding: 0.85rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            align-items: center;
+            gap: 2.5rem;
+            animation: scrollMarquee 38s linear infinite;
+        }
+
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.84rem;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+        }
+
+        .marquee-item i {
+            color: var(--gold-400);
+            font-size: 0.75rem;
+        }
+
+        @keyframes scrollMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ================= SECCIONES GENERALES ================= */
+        section {
+            padding: 5.2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1220px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-600);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.1rem, 3.5vw, 2.85rem);
+            color: var(--navy-900);
+            line-height: 1.15;
+            margin-bottom: 0.85rem;
+        }
+
+        .section-divider {
+            width: 72px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--navy-900), var(--gold-500));
+            margin: 0 auto 1rem;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= PILARES DE INVESTIGACIÓN Y MEDALLONES ================= */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .pillar-card {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-top: 4px solid var(--navy-900);
+            border-radius: var(--radius-lg);
+            padding: 2.1rem 1.8rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            border-top-color: var(--gold-500);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pillar-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-500), var(--gold-400));
+            color: var(--navy-950);
+            font-size: 1.45rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.3rem;
+            box-shadow: 0 8px 20px rgba(197, 160, 89, 0.32);
+        }
+
+        .pillar-card h3 {
+            font-size: 1.5rem;
+            color: var(--navy-900);
+            margin-bottom: 0.7rem;
+            line-height: 1.25;
+        }
+
+        .pillar-card p {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        /* Perfil Humanístico y Competencias Blandas */
+        .humanistic-banner {
+            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+            color: #FFFFFF;
+            border-radius: var(--radius-lg);
+            padding: 2.2rem 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1.25fr;
+            gap: 2rem;
+            align-items: center;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(197, 160, 89, 0.35);
+        }
+
+        .humanistic-banner h3 {
+            font-size: 1.8rem;
+            color: var(--gold-400);
+            margin-bottom: 0.5rem;
+        }
+
+        .humanistic-banner p {
+            color: rgba(255, 255, 255, 0.86);
+            font-size: 0.95rem;
+        }
+
+        .soft-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .soft-tag {
+            background: rgba(255, 255, 255, 0.09);
+            border: 1px solid rgba(197, 160, 89, 0.42);
+            color: #FFFFFF;
+            padding: 0.55rem 1rem;
+            border-radius: 999px;
+            font-size: 0.86rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .soft-tag i {
+            color: var(--gold-400);
+        }
+
+        /* ================= EDUCACIÓN / GRADOS ACADÉMICOS ================= */
+        .bg-alt {
+            background-color: #F1F5F9;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-btn {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            padding: 0.55rem 1.25rem;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--navy-900);
+            color: var(--gold-400);
+            border-color: var(--navy-900);
+        }
+
+        .degrees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .degree-card {
+            background: var(--surface);
+            border-radius: var(--radius-md);
+            padding: 1.65rem;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .degree-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--navy-900);
+        }
+
+        .degree-card.highlight::before {
+            background: linear-gradient(180deg, var(--gold-500), var(--royal-700));
+            width: 5px;
+        }
+
+        .degree-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .degree-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .degree-year {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--navy-900);
+            background: #E2E8F0;
+            padding: 0.25rem 0.7rem;
+            border-radius: 6px;
+        }
+
+        .badge-ongoing {
+            background: var(--gold-100);
+            color: #8A6520;
+            border: 1px solid rgba(197, 160, 89, 0.5);
+            font-size: 0.74rem;
+            font-weight: 700;
+            padding: 0.22rem 0.65rem;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .degree-title {
+            font-size: 1.32rem;
+            color: var(--navy-900);
+            margin-bottom: 0.55rem;
+            line-height: 1.28;
+        }
+
+        .degree-inst {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--royal-700);
+            margin-bottom: 0.35rem;
+        }
+
+        .degree-loc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* ================= PRODUCCIÓN EDITORIAL Y PROYECTOS ================= */
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .pub-card {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pub-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold-500);
+        }
+
+        .pub-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-600);
+            margin-bottom: 0.8rem;
+        }
+
+        .pub-card h3 {
+            font-size: 1.45rem;
+            color: var(--navy-900);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .pub-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .pub-meta {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--navy-800);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ================= LÍNEA DE TIEMPO EXPERIENCIA PROFESIONAL ================= */
+        .timeline {
+            position: relative;
+            max-width: 940px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--gold-500), var(--navy-900), var(--border-subtle));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.75rem;
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 1.75rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            border-color: var(--gold-500);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2.05rem;
+            top: 1.65rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--gold-500);
+            border: 3px solid var(--navy-900);
+            box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.22);
+        }
+
+        .timeline-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .timeline-role {
+            font-size: 1.35rem;
+            color: var(--navy-900);
+            font-weight: 700;
+        }
+
+        .timeline-date {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #8A6520;
+            background: var(--gold-100);
+            padding: 0.22rem 0.75rem;
+            border-radius: 999px;
+        }
+
+        .timeline-org {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--royal-700);
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* ================= SEMINARIOS Y CERTIFICACIONES ================= */
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 1.35rem;
+        }
+
+        .cert-card {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.4rem 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.25s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--gold-500);
+            transform: translateY(-3px);
+        }
+
+        .cert-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: var(--gold-100);
+            color: #8A6520;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .cert-body h4 {
+            font-size: 0.96rem;
+            color: var(--navy-900);
+            margin-bottom: 0.3rem;
+            line-height: 1.35;
+        }
+
+        .cert-body p {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .cert-year {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--royal-700);
+        }
+
+        /* ================= IDIOMAS ================= */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .lang-card {
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+
+        .lang-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold-500);
+        }
+
+        .lang-level-ring {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+            border: 3px solid var(--gold-500);
+            color: var(--gold-400);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lang-name {
+            font-size: 1.25rem;
+            color: var(--navy-900);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .lang-desc {
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .lang-bar {
+            width: 100%;
+            height: 6px;
+            background: #E2E8F0;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .lang-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--navy-900), var(--gold-500));
+            border-radius: 999px;
+        }
+
+        /* ================= CONTACTO ================= */
+        .contact-section {
+            background: linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 100%);
+            color: #FFFFFF;
+        }
+
+        .contact-section .section-title {
+            color: #FFFFFF;
+        }
+
+        .contact-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.25fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .contact-info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.32);
+            border-radius: var(--radius-lg);
+            padding: 2.2rem;
+        }
+
+        .contact-info-box h3 {
+            font-size: 1.75rem;
+            color: var(--gold-400);
+            margin-bottom: 1.15rem;
+        }
+
+        .contact-direct-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            color: rgba(255, 255, 255, 0.92);
+            text-decoration: none;
+        }
+
+        .contact-direct-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: rgba(197, 160, 89, 0.16);
+            color: var(--gold-400);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .emails-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+        }
+
+        .emails-box h3 {
+            font-size: 1.55rem;
+            color: #FFFFFF;
+            margin-bottom: 0.4rem;
+        }
+
+        .emails-box > p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.72);
+            margin-bottom: 1.35rem;
+        }
+
+        .email-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 0.7rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .email-row:hover {
+            border-color: var(--gold-400);
+        }
+
+        .email-meta {
+            overflow: hidden;
+        }
+
+        .email-tag {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-400);
+            font-weight: 600;
+        }
+
+        .email-address {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            background: rgba(197, 160, 89, 0.18);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            color: var(--gold-400);
+            padding: 0.4rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .copy-btn:hover {
+            background: var(--gold-500);
+            color: var(--navy-950);
+        }
+
+        footer {
+            background: #030914;
+            color: rgba(255, 255, 255, 0.65);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(197, 160, 89, 0.22);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--navy-900);
+            color: #FFFFFF;
+            border: 1px solid var(--gold-500);
+            padding: 0.85rem 1.25rem;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+            font-size: 0.88rem;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(12px);
+            transition: all 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .dynamic-role-wrapper, .hero-actions, .hero-quick-badges {
+                justify-content: center;
+            }
+            .hero-lead {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .pillars-grid, .publications-grid {
+                grid-template-columns: 1fr;
+            }
+            .humanistic-banner, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stat-item {
+                border-right: none;
+            }
+            .languages-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--navy-950);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1.1rem;
+                border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+                display: none;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .stats-grid, .languages-grid, .degrees-grid, .certs-grid {
+                grid-template-columns: 1fr;
+            }
+            .stat-item {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                padding-bottom: 1rem;
+            }
+            .stat-item:last-child {
+                border-bottom: none;
+            }
+            .floating-credential {
+                left: 10px;
+                right: 10px;
+                bottom: -14px;
+            }
+        }
+
+        @media print {
+            header.navbar, .marquee-wrapper, .hero-actions, .filter-tabs, .copy-btn {
+                display: none !important;
+            }
+            body {
+                background: #FFFFFF;
+                color: #000000;
+            }
+            .hero, .contact-section, .experience-banner, .humanistic-banner {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                padding: 1.5rem 0 !important;
+            }
+            .hero h1 span, .section-title, .stat-number {
+                -webkit-text-fill-color: #0A1931 !important;
+                color: #0A1931 !important;
+            }
+            section {
+                padding: 2rem 0 !important;
+            }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= BARRA DE NAVEGACIÓN ================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="brand">
+                <div class="brand-monogram">JC</div>
+                <div class="brand-text">
+                    <span class="brand-name">José H. Carballo Araya</span>
+                    <span class="brand-role">Académico • Investigador • Docente</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#investigacion">Líneas de Especialidad</a></li>
+                <li><a href="#educacion">Grados Académicos</a></li>
+                <li><a href="#publicaciones">Libros y Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#certificaciones">Seminarios</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ================= PORTADA / HERO ================= -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div>
+                <div class="academic-pill">
+                    <i class="fa-solid fa-building-columns"></i>
+                    Portafolio Académico &amp; Universitario • 2026
+                </div>
+
+                <h1><span>José H. Carballo Araya</span></h1>
+
+                <div class="dynamic-role-wrapper">
+                    <span id="typewriter">Doctorando en Ciencias de la Educación (UCAT)</span><span class="cursor"></span>
+                </div>
+
+                <p class="hero-lead">
+                    Docente, investigador y co-autor de obras didácticas con trayectoria ininterrumpida desde 1999. Especialista en la enseñanza del francés y didáctica de las lenguas extranjeras, pensamiento crítico, pedagogía decolonial e interculturalidad, administración educativa, currículum y evaluación.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-gold">
+                        <i class="fa-solid fa-envelope-open-text"></i> Contacto Académico
+                    </a>
+                    <a href="Curriculum 2026 jose.pdf" download class="btn btn-outline" id="cvDownloadBtn">
+                        <i class="fa-solid fa-file-arrow-down"></i> Descargar CV (PDF)
+                    </a>
+                    <button onclick="window.print()" class="btn btn-outline" type="button">
+                        <i class="fa-solid fa-print"></i> Imprimir Dossier
+                    </button>
+                </div>
+
+                <div class="hero-quick-badges">
+                    <span class="q-badge"><i class="fa-solid fa-user-graduate"></i> Doctorando UCAT (2026)</span>
+                    <span class="q-badge"><i class="fa-solid fa-award"></i> 3 Maestrías en Educación</span>
+                    <span class="q-badge"><i class="fa-solid fa-book-open"></i> Co-Autor Libros MEP–ICER</span>
+                    <span class="q-badge"><i class="fa-solid fa-stamp"></i> Examinador-Corrector DELF (París)</span>
+                </div>
+            </div>
+
+            <div class="hero-portrait-col">
+                <div class="portrait-card">
+                    <div class="portrait-inner">
+                        <!-- Detecta automáticamente Unknown-3.jpeg, Unknown-3_2.jpeg o perfil.jpg -->
+                        <img id="profileImage" src="Unknown-3.jpeg" alt="José H. Carballo Araya"
+                             onerror="handleImageFallback(this)">
+                        <div class="portrait-fallback" id="portraitFallback">
+                            <div class="initials">JC</div>
+                            <p style="font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:#DFB970;">José H. Carballo Araya</p>
+                            <p style="font-size:0.84rem;opacity:0.85;margin-top:0.4rem;">Doctorando en Ciencias de la Educación</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-credential">
+                        <i class="fa-solid fa-landmark-dome"></i>
+                        <div>
+                            <strong>DALF C1 &bull; Examinador DELF</strong>
+                            <span>CIEP París &amp; Alianza Francesa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BANNER ANIMADO DE EXPERIENCIA ================= -->
+    <div class="experience-banner">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number" data-target="27" data-prefix="+">0</div>
+                <div class="stat-label">Años de Trayectoria Docente (desde 1999)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="9" data-prefix="">0</div>
+                <div class="stat-label">Títulos y Estudios Universitarios</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="2" data-prefix="">0</div>
+                <div class="stat-label">Libros Oficiales Co-Autorados (ICER–MEP)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="9" data-prefix="">0</div>
+                <div class="stat-label">Certificaciones y Seminarios Internacionales</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="4" data-prefix="">0</div>
+                <div class="stat-label">Idiomas de Dominio Académico</div>
+            </div>
+        </div>
+
+        <!-- Cinta Institucional Animada -->
+        <div class="marquee-wrapper" aria-label="Instituciones de trayectoria académica y profesional">
+            <div class="marquee-track">
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Católica de Costa Rica (UCAT)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Nacional (UNA)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Ministerio de Educación Pública (MEP)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Alianza Francesa de Costa Rica</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Estatal a Distancia (UNED)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Latina de Costa Rica</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Americana (UAM)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Convenio ICER – MEP (Desarrollo Curricular)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Centro Internacional de Estudios Pedagógicos (París, Francia)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Academia de Orléans-Tours (Blois, Francia)</span>
+                <!-- Duplicado para desplazamiento infinito fluido -->
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Católica de Costa Rica (UCAT)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Nacional (UNA)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Ministerio de Educación Pública (MEP)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Alianza Francesa de Costa Rica</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Estatal a Distancia (UNED)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Latina de Costa Rica</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Universidad Americana (UAM)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Convenio ICER – MEP (Desarrollo Curricular)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Centro Internacional de Estudios Pedagógicos (París, Francia)</span>
+                <span class="marquee-item"><i class="fa-solid fa-star"></i> Academia de Orléans-Tours (Blois, Francia)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= EJES DE INVESTIGACIÓN Y ESPECIALIDAD ================= -->
+    <section id="investigacion">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Ejes Científicos y Pedagógicos</span>
+                <h2 class="section-title">Áreas de Investigación y Especialización</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Investigador en los temas de la enseñanza del francés, el pensamiento crítico y decolonial, la evaluación, el currículum y la administración educativa.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon"><strong style="font-family:'Cormorant Garamond',serif;font-size:1.75rem;">F</strong></div>
+                    <h3>Enseñanza del Francés y Didáctica de las Lenguas Extranjeras</h3>
+                    <p>
+                        Especialización en lingüística aplicada, didáctica del Francés Lengua Extranjera (FLE), producción de textos didácticos para educación a distancia, integración de tecnologías digitales y evaluación certificativa internacional DELF–DALF.
+                    </p>
+                </div>
+
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <h3>Pensamiento Crítico, Decolonial e Interculturalidad</h3>
+                    <p>
+                        Reflexión epistemológica y pedagógica desde las Ciencias de la Educación orientada al análisis crítico del currículum, el diálogo intercultural en el espacio francófono y la descolonización de las prácticas educativas.
+                    </p>
+                </div>
+
+                <div class="pillar-card reveal">
+                    <div class="pillar-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+                    <h3>Administración Educativa, Currículum y Evaluación</h3>
+                    <p>
+                        Sólida formación de posgrado en gestión estratégica de instituciones educativas, dotación del talento humano, diseño y desarrollo curricular y sistemas de evaluación de los aprendizajes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="humanistic-banner reveal">
+                <div>
+                    <h3>Competencias Blandas e Intereses Personales</h3>
+                    <p>
+                        Profesional caracterizado por la creatividad y la innovación pedagógica. Apasionado de la música clásica y la ópera, las nuevas tecnologías aplicadas a la educación y el trabajo colaborativo en equipo.
+                    </p>
+                </div>
+                <div class="soft-tags">
+                    <span class="soft-tag"><i class="fa-solid fa-lightbulb"></i> Creatividad e Innovación</span>
+                    <span class="soft-tag"><i class="fa-solid fa-people-group"></i> Trabajo en Equipo</span>
+                    <span class="soft-tag"><i class="fa-solid fa-microchip"></i> Nuevas Tecnologías</span>
+                    <span class="soft-tag"><i class="fa-solid fa-music"></i> Música Clásica y Ópera</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EDUCACIÓN / FORMACIÓN UNIVERSITARIA ================= -->
+    <section id="educacion" class="bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Trayectoria Universitaria</span>
+                <h2 class="section-title">Educación y Grados Académicos</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Formación superior multidisciplinaria en Ciencias de la Educación, Lingüística Aplicada, Enseñanza del Francés, Currículum, Evaluación y Administración Educativa.
+                </p>
+            </div>
+
+            <div class="filter-tabs reveal">
+                <button class="filter-btn active" data-filter="all">Todos los Estudios (9)</button>
+                <button class="filter-btn" data-filter="posgrado">Doctorado y Maestrías (4)</button>
+                <button class="filter-btn" data-filter="grado">Licenciaturas, Bachillerato y Diplomado (5)</button>
+            </div>
+
+            <div class="degrees-grid">
+                <!-- 1 -->
+                <article class="degree-card highlight reveal" data-category="posgrado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2026</span>
+                            <span class="badge-ongoing">En curso</span>
+                        </div>
+                        <h3 class="degree-title">Doctorando en Ciencias de la Educación</h3>
+                        <p class="degree-inst">Universidad Católica de Costa Rica (UCAT)</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> Campus Moravia, San José, Costa Rica</p>
+                </article>
+
+                <!-- 2 -->
+                <article class="degree-card highlight reveal" data-category="grado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2026</span>
+                            <span class="badge-ongoing">En curso</span>
+                        </div>
+                        <h3 class="degree-title">Licenciatura en Lingüística Aplicada con Énfasis en Francés</h3>
+                        <p class="degree-inst">Universidad Nacional (UNA)</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> Heredia, Costa Rica</p>
+                </article>
+
+                <!-- 3 -->
+                <article class="degree-card reveal" data-category="posgrado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2025</span>
+                        </div>
+                        <h3 class="degree-title">Maestría en Ciencias de la Educación con Énfasis en Administración Educativa</h3>
+                        <p class="degree-inst">Universidad Americana (U.A.M.)</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> San Pedro, Costa Rica</p>
+                </article>
+
+                <!-- 4 -->
+                <article class="degree-card reveal" data-category="posgrado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2024</span>
+                        </div>
+                        <h3 class="degree-title">Maestría en Ciencias de la Educación con Énfasis en Currículum</h3>
+                        <p class="degree-inst">Universidad Latina de Costa Rica</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> San Pedro, Costa Rica</p>
+                </article>
+
+                <!-- 5 -->
+                <article class="degree-card reveal" data-category="posgrado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2023</span>
+                        </div>
+                        <h3 class="degree-title">Maestría en Ciencias de la Educación con Énfasis en Evaluación Educativa</h3>
+                        <p class="degree-inst">Universidad Latina de Costa Rica</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> San Pedro, Costa Rica</p>
+                </article>
+
+                <!-- 6 -->
+                <article class="degree-card reveal" data-category="grado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2022</span>
+                        </div>
+                        <h3 class="degree-title">Licenciatura en la Enseñanza del Francés</h3>
+                        <p class="degree-inst">Universidad Estatal a Distancia (U.N.E.D.)</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> Sabanilla, San José, Costa Rica</p>
+                </article>
+
+                <!-- 7 -->
+                <article class="degree-card reveal" data-category="grado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2020</span>
+                        </div>
+                        <h3 class="degree-title">Diplomado en Ciencias de la Educación I y II Ciclos</h3>
+                        <p class="degree-inst">Universidad San Isidro Labrador</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> Heredia, Costa Rica</p>
+                </article>
+
+                <!-- 8 -->
+                <article class="degree-card reveal" data-category="grado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2011</span>
+                        </div>
+                        <h3 class="degree-title">Licenciatura en Docencia</h3>
+                        <p class="degree-inst">Universidad San Marcos</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> San José, Costa Rica</p>
+                </article>
+
+                <!-- 9 -->
+                <article class="degree-card reveal" data-category="grado">
+                    <div>
+                        <div class="degree-top">
+                            <span class="degree-year">2005</span>
+                        </div>
+                        <h3 class="degree-title">Bachillerato en la Enseñanza del Francés</h3>
+                        <p class="degree-inst">Universidad Nacional (UNA)</p>
+                    </div>
+                    <p class="degree-loc"><i class="fa-solid fa-location-dot"></i> Heredia, Costa Rica</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCCIÓN EDITORIAL Y PROYECTOS ================= -->
+    <section id="publicaciones">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Obras Didácticas y Difusión</span>
+                <h2 class="section-title">Publicaciones y Proyectos Culturales</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Producción intelectual y mediática desarrollada junto a instituciones públicas y universitarias de Costa Rica.
+                </p>
+            </div>
+
+            <div class="publications-grid">
+                <article class="pub-card reveal">
+                    <div>
+                        <div class="pub-type"><i class="fa-solid fa-book"></i> Co-Autoría de Libro</div>
+                        <h3>Francés A2: Bachillerato por madurez a distancia</h3>
+                        <p>
+                            Obra elaborada en el marco del convenio entre el Instituto Costarricense de Enseñanza Radiofónica (ICER) y el Ministerio de Educación Pública (MEP), Dirección de Desarrollo Curricular.
+                        </p>
+                    </div>
+                    <div class="pub-meta">
+                        <span>Convenio ICER – MEP</span>
+                        <span class="badge-ongoing">2026 (En curso)</span>
+                    </div>
+                </article>
+
+                <article class="pub-card reveal">
+                    <div>
+                        <div class="pub-type"><i class="fa-solid fa-book-bookmark"></i> Co-Autoría de Libro</div>
+                        <h3>Francés A1: Bachillerato por madurez a distancia</h3>
+                        <p>
+                            Libro de texto oficial publicado en el convenio entre el Instituto Costarricense de Enseñanza Radiofónica (ICER) y el Ministerio de Educación Pública (MEP), Dirección de Desarrollo Curricular.
+                        </p>
+                    </div>
+                    <div class="pub-meta">
+                        <span>Convenio ICER – MEP</span>
+                        <span>Publicado • 2025</span>
+                    </div>
+                </article>
+
+                <article class="pub-card reveal">
+                    <div>
+                        <div class="pub-type"><i class="fa-solid fa-tower-broadcast"></i> Proyecto Universitario / TV</div>
+                        <h3>Proyecto “ECHO FRANCOPHONES”</h3>
+                        <p>
+                            Participación como Co-Animador en el proyecto académico y cultural del Departamento de Francés de la Universidad Nacional (UNA), producido por el S.I.N.A.R.T. en San José, Costa Rica.
+                        </p>
+                    </div>
+                    <div class="pub-meta">
+                        <span>UNA – S.I.N.A.R.T.</span>
+                        <span>San José • 2010</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EXPERIENCIA PROFESIONAL ================= -->
+    <section id="experiencia" class="bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Trayectoria Institucional</span>
+                <h2 class="section-title">Experiencia Profesional y Docente</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Ejercicio profesional en administración del talento humano, docencia en universidades estatales y privadas, Alianza Francesa y educación internacional.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Departamento de Dotación del Talento Humano</h3>
+                        <span class="timeline-date">2026</span>
+                    </div>
+                    <p class="timeline-org">Dirección Regional de Educación, San José Central – Ministerio de Educación Pública (MEP)</p>
+                    <p class="timeline-desc">Gestión administrativa y procesos de dotación del talento humano en la Dirección Regional de Educación San José Central.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Co-Autor del Libro: Francés A2: Bachillerato por madurez a distancia</h3>
+                        <span class="timeline-date">2026 (En curso)</span>
+                    </div>
+                    <p class="timeline-org">Convenio Instituto Costarricense de Enseñanza Radiofónica (ICER) y Ministerio de Educación Pública (MEP)</p>
+                    <p class="timeline-desc">Desarrollo de obra didáctica junto a la Dirección de Desarrollo Curricular del MEP.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Co-Autor del Libro: Francés A1: Bachillerato por madurez a distancia</h3>
+                        <span class="timeline-date">2025</span>
+                    </div>
+                    <p class="timeline-org">Convenio Instituto Costarricense de Enseñanza Radiofónica (ICER) y Ministerio de Educación Pública (MEP)</p>
+                    <p class="timeline-desc">Co-autoría del texto oficial de Francés A1 junto a la Dirección de Desarrollo Curricular del MEP.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Profesor de Francés</h3>
+                        <span class="timeline-date">1999 – 2025</span>
+                    </div>
+                    <p class="timeline-org">Ministerio de Educación Pública (MEP) – San José, Costa Rica</p>
+                    <p class="timeline-desc">Amplia trayectoria docente en la enseñanza de la lengua y cultura francesa en el sistema educativo público costarricense.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Profesor de Francés</h3>
+                        <span class="timeline-date">2010 – 2018</span>
+                    </div>
+                    <p class="timeline-org">Alianza Francesa de Costa Rica – San José, Costa Rica</p>
+                    <p class="timeline-desc">Docencia especializada de Francés Lengua Extranjera (FLE) y preparación lingüística internacional.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Profesor Universitario</h3>
+                        <span class="timeline-date">2010</span>
+                    </div>
+                    <p class="timeline-org">Universidad Latina de Costa Rica – San Pedro, San José, Costa Rica</p>
+                    <p class="timeline-desc">Ejercicio de la docencia en educación superior universitaria.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Co-Animador en el Proyecto “ECHO FRANCOPHONES”</h3>
+                        <span class="timeline-date">2010</span>
+                    </div>
+                    <p class="timeline-org">Departamento de Francés, Universidad Nacional (UNA) – Producido por el S.I.N.A.R.T.</p>
+                    <p class="timeline-desc">Proyecto de difusión lingüística y cultural francófona realizado en San José, Costa Rica.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Profesor de Francés (Extensión Docente)</h3>
+                        <span class="timeline-date">2004</span>
+                    </div>
+                    <p class="timeline-org">U.N.E.D. (Universidad Estatal a Distancia) – Sabanilla, San José, Costa Rica</p>
+                    <p class="timeline-desc">Docencia universitaria de lengua francesa en los programas de extensión docente de la UNED.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Profesor de Francés</h3>
+                        <span class="timeline-date">2004</span>
+                    </div>
+                    <p class="timeline-org">Colegio Británico de Costa Rica – Rohrmoser, San José, Costa Rica</p>
+                    <p class="timeline-desc">Enseñanza del francés como lengua extranjera en institución educativa internacional.</p>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Pasantía como Asistente de Español</h3>
+                        <span class="timeline-date">2000</span>
+                    </div>
+                    <p class="timeline-org">Liceo Philibert Dessaignes y Liceo de Hostelería y de Turismo del Valle del Loira – Academia de Orléans-Tours</p>
+                    <p class="timeline-desc">Experiencia pedagógica e intercultural desarrollada en la ciudad de Blois, Francia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SEMINARIOS Y FORMACIONES ================= -->
+    <section id="certificaciones">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Formación Continua Internacional</span>
+                <h2 class="section-title">Seminarios, Certificaciones y Habilitaciones</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Capacitaciones y acreditaciones oficiales en evaluación, pedagogía y didáctica del Francés Lengua Extranjera (FLE).
+                </p>
+            </div>
+
+            <div class="certs-grid">
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+                    <div class="cert-body">
+                        <h4>Desarrollar la dinámica de grupo para favorecer la motivación de los estudiantes en clase de Francés Lengua Extranjera (FLE)</h4>
+                        <p>Certificación de participación • Francia Educación Internacional, Promoción del francés en América Central</p>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-laptop-file"></i></div>
+                    <div class="cert-body">
+                        <h4>Integrar las tecnologías digitales en las prácticas de aula en FLE</h4>
+                        <p>Certificación de participación • Francia Educación Internacional, Promoción del francés en América Central</p>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <div class="cert-body">
+                        <h4>Formación en las nuevas rúbricas de evaluación D.E.L.F.–D.A.L.F.</h4>
+                        <p>Certificación de seguimiento • Francia Educación Internacional</p>
+                        <span class="cert-year">2022</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="cert-body">
+                        <h4>Certificación de habilitación de examinador-corrector de las pruebas escritas y orales de los exámenes D.E.L.F. (niveles A1.1–A1–A2–B1–B2)</h4>
+                        <p>Centro Internacional de Estudios Pedagógicos (CIEP) • París, Francia</p>
+                        <span class="cert-year">2021</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="cert-body">
+                        <h4>Diploma Avanzado en Lengua Francesa D.A.L.F. C1</h4>
+                        <p>Alianza Francesa de San José, Costa Rica</p>
+                        <span class="cert-year">2020</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="cert-body">
+                        <h4>XVI SEDIFRALE (Congreso de Profesores de Francés)</h4>
+                        <p>Universidad Nacional (UNA) • Heredia, Costa Rica</p>
+                        <span class="cert-year">2014</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="cert-body">
+                        <h4>Formación: La enseñanza del francés como lengua extranjera en clases numerosas</h4>
+                        <p>Instituto Francés, Alianza Francesa de San José, Costa Rica</p>
+                        <span class="cert-year">2013</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="cert-body">
+                        <h4>Formación: La civilización y las actualidades en la enseñanza del francés lengua extranjera</h4>
+                        <p>Instituto Francés, Alianza Francesa de San José, Costa Rica</p>
+                        <span class="cert-year">2012</span>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-icon"><i class="fa-solid fa-pen-fancy"></i></div>
+                    <div class="cert-body">
+                        <h4>Formación: La habilidad escrita en francés lengua extranjera</h4>
+                        <p>Instituto Francés, Alianza Francesa de Panamá</p>
+                        <span class="cert-year">2012</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= IDIOMAS ================= -->
+    <section id="idiomas" class="bg-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Competencia Plurilingüe</span>
+                <h2 class="section-title">Idiomas</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Dominio certificado bajo los niveles del Marco Común Europeo de Referencia para las Lenguas (MCER).
+                </p>
+            </div>
+
+            <div class="languages-grid">
+                <div class="lang-card reveal">
+                    <div class="lang-level-ring">LM</div>
+                    <h3 class="lang-name">Espagnol</h3>
+                    <p class="lang-desc">Lengua Materna (LM)</p>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 100%;"></div></div>
+                </div>
+
+                <div class="lang-card reveal">
+                    <div class="lang-level-ring">C1</div>
+                    <h3 class="lang-name">Français</h3>
+                    <p class="lang-desc">Nivel Avanzado C1 (DALF C1)</p>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 92%;"></div></div>
+                </div>
+
+                <div class="lang-card reveal">
+                    <div class="lang-level-ring">B1+</div>
+                    <h3 class="lang-name">Anglais</h3>
+                    <p class="lang-desc">Nivel Intermedio Avanzado B1+</p>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 68%;"></div></div>
+                </div>
+
+                <div class="lang-card reveal">
+                    <div class="lang-level-ring">A2</div>
+                    <h3 class="lang-name">Portugais</h3>
+                    <p class="lang-desc">Nivel A2</p>
+                    <div class="lang-bar"><div class="lang-fill" style="width: 42%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Proyección Universitaria e Institucional</span>
+                <h2 class="section-title">Contacto</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">
+                    Disponible para docencia e investigación universitaria, comisiones curriculares y de evaluación, asesoría académica y proyectos interinstitucionales.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-box reveal">
+                    <h3>Canales Directos</h3>
+
+                    <a href="tel:+50687085475" class="contact-direct-item">
+                        <div class="contact-direct-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div>
+                            <strong style="display:block;font-size:0.82rem;color:#DFB970;">Teléfono</strong>
+                            <span>(506) 87.08.54.75</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/50687085475" target="_blank" rel="noopener noreferrer" class="contact-direct-item">
+                        <div class="contact-direct-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <strong style="display:block;font-size:0.82rem;color:#DFB970;">WhatsApp Académico</strong>
+                            <span>+506 8708-5475</span>
+                        </div>
+                    </a>
+
+                    <div class="contact-direct-item">
+                        <div class="contact-direct-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <strong style="display:block;font-size:0.82rem;color:#DFB970;">Ubicación</strong>
+                            <span>San Francisco de Dos Ríos, San José, Costa Rica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emails-box reveal">
+                    <h3>Correos Electrónicos Académicos e Institucionales</h3>
+                    <p>Puedes enviar un correo haciendo clic directamente o copiar la dirección con un clic.</p>
+
+                    <div class="email-row">
+                        <div class="email-meta">
+                            <span class="email-tag">Personal / Académico Principal</span>
+                            <a class="email-address" href="mailto:monsieur.carballo09@gmail.com">monsieur.carballo09@gmail.com</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyEmail('monsieur.carballo09@gmail.com')">Copiar</button>
+                    </div>
+
+                    <div class="email-row">
+                        <div class="email-meta">
+                            <span class="email-tag">Ministerio de Educación Pública (MEP)</span>
+                            <a class="email-address" href="mailto:jose.carballo.araya@mep.go.cr">jose.carballo.araya@mep.go.cr</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyEmail('jose.carballo.araya@mep.go.cr')">Copiar</button>
+                    </div>
+
+                    <div class="email-row">
+                        <div class="email-meta">
+                            <span class="email-tag">Universidad Católica de Costa Rica (UCAT)</span>
+                            <a class="email-address" href="mailto:jcarballo_est@ucatolica.ac.cr">jcarballo_est@ucatolica.ac.cr</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyEmail('jcarballo_est@ucatolica.ac.cr')">Copiar</button>
+                    </div>
+
+                    <div class="email-row">
+                        <div class="email-meta">
+                            <span class="email-tag">Universidad Latina de Costa Rica</span>
+                            <a class="email-address" href="mailto:jose.carballo09@ulatina.net">jose.carballo09@ulatina.net</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyEmail('jose.carballo09@ulatina.net')">Copiar</button>
+                    </div>
+
+                    <div class="email-row">
+                        <div class="email-meta">
+                            <span class="email-tag">Universidad Americana (UAM)</span>
+                            <a class="email-address" href="mailto:jose.carballo@uamcr.net">jose.carballo@uamcr.net</a>
+                        </div>
+                        <button class="copy-btn" onclick="copyEmail('jose.carballo@uamcr.net')">Copiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <strong>Carballo Araya José H.</strong> &bull; Portafolio Académico, Investigativo y Profesional &bull; San José, Costa Rica.</p>
+    </footer>
+
+    <div class="toast" id="toast">Correo copiado al portapapeles</div>
+
+    <!-- ================= SCRIPTS DE INTERACTIVIDAD Y ANIMACIONES ================= -->
+    <script>
+        // 1. Detección automática de tu foto según el nombre con el que la subas a GitHub
+        const candidatePhotos = [
+            'Unknown-3_2.jpeg',
+            'perfil.jpg',
+            'perfil.jpeg',
+            'perfil.png',
+            'foto.jpg'
+        ];
+        let photoAttempt = 0;
+
+        function handleImageFallback(imgEl) {
+            if (photoAttempt < candidatePhotos.length) {
+                imgEl.src = candidatePhotos[photoAttempt];
+                photoAttempt++;
+            } else {
+                imgEl.style.display = 'none';
+                document.getElementById('portraitFallback').style.display = 'flex';
+            }
+        }
+
+        // 2. Menú desplegable en móviles
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+
+        // 3. Animación de texto dinámico en portada
+        const roles = [
+            "Doctorando en Ciencias de la Educación (UCAT)",
+            "Enseñanza del Francés y Didáctica de las Lenguas Extranjeras",
+            "Pensamiento Crítico, Decolonial e Interculturalidad",
+            "Magíster en Administración Educativa, Currículum y Evaluación",
+            "Co-Autor de Libros Didácticos (Convenio ICER – MEP)"
+        ];
+        let roleIndex = 0;
+        let charIndex = roles[0].length;
+        let isDeleting = true;
+        const typeTarget = document.getElementById('typewriter');
+
+        function runTypewriter() {
+            const currentText = roles[roleIndex];
+            if (isDeleting) {
+                charIndex--;
+                typeTarget.textContent = currentText.substring(0, charIndex);
+                if (charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(runTypewriter, 350);
+                    return;
+                }
+                setTimeout(runTypewriter, 26);
+            } else {
+                charIndex++;
+                typeTarget.textContent = currentText.substring(0, charIndex);
+                if (charIndex === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(runTypewriter, 2700);
+                    return;
+                }
+                setTimeout(runTypewriter, 50);
+            }
+        }
+        setTimeout(runTypewriter, 2500);
+
+        // 4. Aparición progresiva de secciones al desplazarse
+        const revealElements = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        } else {
+            revealElements.forEach(el => el.classList.add('visible'));
+        }
+
+        // 5. Contadores animados del banner de experiencia
+        const counters = document.querySelectorAll('.stat-number');
+        let countersStarted = false;
+
+        function animateCounters() {
+            if (countersStarted) return;
+            countersStarted = true;
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'), 10);
+                const prefix = counter.getAttribute('data-prefix') || '';
+                let count = 0;
+                const stepTime = Math.max(45, Math.floor(1400 / target));
+                const timer = setInterval(() => {
+                    count++;
+                    counter.textContent = prefix + count;
+                    if (count >= target) {
+                        counter.textContent = prefix + target;
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            });
+        }
+
+        if ('IntersectionObserver' in window) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) animateCounters();
+            }, { threshold: 0.3 });
+            const statsSection = document.querySelector('.experience-banner');
+            if (statsSection) statsObserver.observe(statsSection);
+        } else {
+            animateCounters();
+        }
+
+        // 6. Filtro interactivo de Grados Académicos
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const degreeCards = document.querySelectorAll('.degree-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+
+                degreeCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 7. Copiar correo al portapapeles
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.getElementById('toast');
+                toast.textContent = 'Correo copiado: ' + email;
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2600);
+            });
+        }
+    </script>
+</body>
+</html>
